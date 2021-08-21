@@ -1,0 +1,155 @@
+面板一键安装命令
+
+
+wget -q https://raw.githubusercontents.com/Oreomeow/VIP/main/Scripts/sh/ql.sh -O ql.sh && bash ql.sh
+
+我自己的仓库
+wget -q https://raw.githubusercontents.com/zengmin19990420/qinglong/main/ql.sh -O ql.sh && bash ql.sh
+或者
+wget -q https://ghproxy.com/https://github.com/zengmin19990420/qinglong/blob/main/ql.sh -O ql.sh && bash ql.sh
+
+
+https://github.com/zengmin19990420/qinglong/blob/main/ql.sh
+
+
+
+1.搭建需要Linux系统的服务器，我用的是CentOS 7.9
+2.连接服务器 电脑推荐使用推荐使用finalShell 手机用juicessh
+3.安装docker
+4.检查yum源且更新
+
+sudo yum check-update
+5.下载docker
+
+curl -fsSL https://get.docker.com/ | sh
+
+出现如图一这个不用管，继续往下执行
+
+6.启动docker
+
+sudo systemctl start docker
+
+7.查看docker状态
+
+sudo yum check-update
+
+8.设置开机自启
+
+sudo systemctl enable docker
+
+9.安装青龙面板
+
+docker pull whyour/qinglong:latest
+执行结果如图二
+
+10.创建容器
+输入下面的代码 直接复制 粘贴 回车就行
+docker run -dit \
+  -v $PWD/ql/config:/ql/config \
+  -v $PWD/ql/log:/ql/log \
+  -v $PWD/ql/db:/ql/db \
+  -v $PWD/ql/repo:/ql/repo \
+  -v $PWD/ql/raw:/ql/raw \
+  -v $PWD/ql/scripts:/ql/scripts \
+  -v $PWD/ql/jbot:/ql/jbot \
+  -v $PWD/ql/ninja:/ql/ninja \
+  -p 5700:5700 \
+  -p 5701:5701 \
+  --name qinglong \
+  --hostname qinglong \
+  --restart unless-stopped \
+  whyour/qinglong:latest
+执行结果如图三
+
+或者
+10.创建容器
+输入下面的代码 直接复制 粘贴 回车就行
+docker run -dit \
+  -v $PWD/ql/config:/ql/config \
+  -v $PWD/ql/log:/ql/log \
+  -v $PWD/ql/db:/ql/db \
+  -v $PWD/ql/repo:/ql/repo \
+  -v $PWD/ql/raw:/ql/raw \
+  -v $PWD/ql/scripts:/ql/scripts \
+  -v $PWD/ql/jbot:/ql/jbot \
+  -v $PWD/ql/ninja:/ql/ninja \
+  --net=host \
+  --name qinglong \
+  --hostname qinglong \
+  --restart unless-stopped \
+  whyour/qinglong:latest
+执行结果如图三
+
+或者安装已经完成部署ninja的青龙面板
+
+docker run -dit \
+  -v $PWD/ql/config:/ql/config \
+  -v $PWD/ql/log:/ql/log \
+  -v $PWD/ql/db:/ql/db \
+  -v $PWD/ql/repo:/ql/repo \
+  -v $PWD/ql/raw:/ql/raw \
+  -v $PWD/ql/scripts:/ql/scripts \
+  -v $PWD/ql/jbot:/ql/jbot \
+  -v $PWD/ql/ninja:/ql/ninja \
+  --net=host \
+  --name qinglong \
+  --hostname qinglong \
+  --restart unless-stopped \
+  zengmin19990420/qinglong:latest
+
+
+
+11.放行青龙面板端口：进云服务器管理界面，防火墙新加一个“5700”端口，其他默认不变。
+
+12.登录青龙面板
+
+（1）浏览器进网址：http://ip:5700
+
+（ip指你的服务器公网ip）
+
+（2）默认账号admin，密码adminadmin，输入后点击登录，会显示密码已重置。
+
+查看重置后的密码，去FinalShell或juicessh输入指令：cat /root/ql/config/auth.json
+复制显示出来代码里password后面双引号中的内容（密码），返回浏览器重新登录面板。
+14.运行面板
+
+15.安装Ninja界面
+（1）shell界面依次输入
+git clone https://github.com/MoonBegonia/ninja.git /ql/ninja
+cd /ql/ninja/backend
+pnpm install
+pm2 start
+cp sendNotify.js /ql/scripts/sendNotify.js
+（2）添加启动任务到extra，随容器启动
+
+extra.sh在青龙面板-配置文件-extra.sh
+
+cd /ql/ninja/backend
+git checkout .
+git pull
+pnpm install
+pm2 start
+cp sendNotify.js /ql/scripts/sendNotify.js
+
+
+
+
+
+
+
+Ninja目前支持的环境变量有：
+ALLOW_ADD: 是否允许添加账号 不允许添加时则只允许已有账号登录（默认 true）
+ALLOW_NUM: 允许添加账号的最大数量（默认 40）
+NINJA_PORT: Ninja 运行端口（默认 5701）
+NINJA_NOTIFY: 是否开启通知功能（默认 true）
+NINJA_UA: 自定义 UA，默认为随机
+
+1.还是老样子 手机打开juicessh 电脑打开finalshell
+
+2.输入docker exec -it qinglong bash
+3.输入cd /ql/ninja/backend
+4.输入cp .env.example .env
+5.去宝塔找到.env文件[在ql/ninja/backend]
+6.文件管理器找到.env文件
+
+重要一点:修改完文件记得输入pm2 start
