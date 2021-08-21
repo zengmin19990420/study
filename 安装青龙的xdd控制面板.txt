@@ -1,0 +1,27 @@
+一、安装gcc
+yum install gcc
+
+二、安装go环境
+
+1、去go官网找到适合你cpu架构的go安装包链接 (https://golang.google.cn/dl/go1.16.7.linux-amd64.tar.gz) ，以amd64。
+
+2、ssh连接，分别执行下面命
+cd /usr/local && wget https://golang.google.cn/dl/go1.16.7.linux-amd64.tar.gz -O go1.16.7.linux-amd64.tar.gz ##local目录下载
+tar -xvzf go1.16.7.linux-amd64.tar.gz ##解压
+vi /etc/profile ##打开文件，设置环境变量，输入“i”进行编辑文件，最后一行输入下面的变量，全选复制进去。
+export GO111MODULE=on
+export GOPROXY=https://goproxy.cn
+export GOROOT=/usr/local/go
+export GOPATH=/usr/local/go/path
+export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
+##输入后，按“Esc”，再输入":wq",按"Enter"，保存并退出。
+source /etc/profile
+go env #运行
+
+3、拉库安装xdd
+cd ~ && git clone https://github.com/cdle/xdd.git        ##拉区库文件
+或者使用备份的库   cd ~ && git clone https://github.com/zengmin19990420/xdd.git
+cd xdd   ##cd到xdd目录
+go build    ##开始编译，稍微等一下，让它跑一会儿
+chmod 777   xdd ##给权限
+./xdd    ##初始化并生成配置文件
