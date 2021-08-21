@@ -21,7 +21,6 @@ go env #运行
 3、拉库安装xdd
 cd ~ && git clone https://github.com/cdle/xdd.git        ##拉区库文件
 或者使用备份的库   cd ~ && git clone https://github.com/zengmin19990420/xdd.git
-cd xdd   ##cd到xdd目录
-go build    ##开始编译，稍微等一下，让它跑一会儿
-chmod 777   xdd ##给权限
+cd xdd && go build   ##进入文件夹，开始编译，稍微等一下，让它跑一会儿
+chmod 777 xdd ##给权限
 ./xdd    ##初始化并生成配置文件
