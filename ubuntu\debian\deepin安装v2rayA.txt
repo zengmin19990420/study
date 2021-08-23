@@ -1,0 +1,20 @@
+v2rayA的作用就不说了，我是在玩客云上安装的，安装的教程如下：
+
+一、安装v2ray核心代码
+
+curl -O https://cdn.jsdelivr.net/gh/v2rayA/v2rayA@master/install/go.sh
+sudo bash go.sh
+
+二、启动v2ray
+
+systemctl start v2ray
+systemctl enable v2ray
+
+三、添加证书和apt源和安装v2raya
+
+wget -qO - https://apt.v2raya.mzz.pub/key/public-key.asc | sudo apt-key add -
+echo "deb http://apt.v2raya.mzz.pub/ v2raya main" | sudo tee /etc/apt/sources.list.d/v2raya.list
+sudo apt update
+sudo apt install v2raya
+
+四、通过127.0.0.1:2017进入v2rayA进行设置第一次进入需要创建密码。
