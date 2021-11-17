@@ -1,0 +1,6 @@
+docker tag [镜像id] [仓库]/[镜像]:[版本标签]
+
+docker login
+##登录docker hub
+
+docker push [仓库]/[镜像]:[版本标签]
