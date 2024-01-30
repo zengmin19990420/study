@@ -200,6 +200,14 @@ CETV-4,http://[2409:8087:1e03:21::2]:6060/cms001/ch00000090990000001348/index.m3
 凤凰资讯,http://[2409:8087:2001:20:2800:0:df6e:eb27]:80/wh7f454c46tw3352677969_1732462333/ott.mobaibox.com/PLTV/3/224/3221228524/index.m3u8
 凤凰香港,http://[2409:8087:2001:20:2800:0:df6e:eb1d]:80/ott.mobaibox.com/PLTV/1/224/3221228530/1.m3u8
 
+常用,#genre#
+爱情公寓vip,https://www.goodiptv.club/douyu/6863367
+神乐的爱情公寓,https://www.goodiptv.club/douyu/6566658
+小雪宝的爱情公寓,https://www.goodiptv.club/douyu/9586235
+名侦探柯南,http://epg.112114.xyz/douyu/7050342
+名侦探柯南丶美琪,https://www.goodiptv.club/douyu/5189447
+
+
 少儿频道,#genre#
 哈哈炫动,http://39.134.24.162/dbiptv.sn.chinamobile.com/PLTV/88888890/224/3221226213/index.m3u8
 浙江少兒,http://hw-m-l.cztv.com/channels/lantian/channel08/1080p.m3u8?k=1a7559a51eeb880b021619a07f463ac4&t=1577153787
