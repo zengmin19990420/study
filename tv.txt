@@ -502,7 +502,6 @@ NewTv明星大片,http://[2409:8087:2001:20:2800:0:df6e:eb18]/wh7f454c46tw285669
 
 斗鱼,#genre#
 计划！五一节の快乐,http://epg.112114.xyz/douyu/7528160
-【三笠】根本不存在解不开的迷！,http://epg.112114.xyz/douyu/7050342
 开心锤锤，开心快乐每一天！,http://epg.112114.xyz/douyu/9018297
 舔狗波比的幸福生活,http://epg.112114.xyz/douyu/7620081
 【贝爷MAX厅】科幻动作经典喜剧,http://epg.112114.xyz/douyu/4332
@@ -651,7 +650,6 @@ ASSASSIN,https://www.goodiptv.club/douyu/8387899
 小小天才搞笑视频,https://www.goodiptv.club/douyu/9419678
 龙视本山快乐营,https://www.goodiptv.club/douyu/9374865
 轩邈Elias,https://www.goodiptv.club/douyu/9412454
-名侦探柯南丶美琪,https://www.goodiptv.club/douyu/5189447
 小猪搞笑精选,https://www.goodiptv.club/douyu/10329752
 理娱打挺疼,https://www.goodiptv.club/douyu/2925563
 伦帝电影说,https://www.goodiptv.club/douyu/9368091
@@ -790,7 +788,6 @@ TUOK肖恩,https://www.goodiptv.club/douyu/9392433
 将军侃片,https://www.goodiptv.club/douyu/8529736
 和平方法,https://www.goodiptv.club/douyu/9650792
 伊太刀刀,https://www.goodiptv.club/douyu/747764
-神乐的爱情公寓,https://www.goodiptv.club/douyu/6566658
 异灵术宇宙第一,https://www.goodiptv.club/douyu/11956108
 南南AKRAPOVIC,https://www.goodiptv.club/douyu/3627728
 神的化身656,https://www.goodiptv.club/douyu/7190773
@@ -1122,7 +1119,6 @@ Dy狗大帅,https://www.goodiptv.club/douyu/3321215
 珍珠小红米,https://www.goodiptv.club/douyu/11905362
 多发几个思雨,https://www.goodiptv.club/douyu/7256376
 许君聪经典小品,https://www.goodiptv.club/douyu/10419558
-小雪宝的爱情公寓,https://www.goodiptv.club/douyu/9586235
 CmoStar,https://www.goodiptv.club/douyu/10282256
 搞笑院长,https://www.goodiptv.club/douyu/8829915
 小羊放映室,https://www.goodiptv.club/douyu/9433806
@@ -1388,7 +1384,6 @@ JG影视解说,https://www.goodiptv.club/douyu/9391277
 多多其木格,https://www.goodiptv.club/douyu/9075374
 神奇的老皮AmazingLP,https://www.goodiptv.club/douyu/8891285
 我是怪异君V,https://www.goodiptv.club/douyu/10279570
-爱情公寓vip,https://www.goodiptv.club/douyu/6863367
 篮球之家老李,https://www.goodiptv.club/douyu/9170147
 开心的霞丶,https://www.goodiptv.club/douyu/11844411
 去种田的向凹凸,https://www.goodiptv.club/douyu/9570290
